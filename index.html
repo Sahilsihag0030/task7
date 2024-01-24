@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            height: 50vh;
+            width: 50vw;
+            background-color: blue;
+        }
+        .box{
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 50px;
+            animation: an1 3s linear infinite, an2 1s ease-out infinite alternate;
+        }
+        
+        @keyframes an1 {
+            from{
+                left: 0;
+                background-color: red;
+            }
+            to{
+                left: 100%;
+                background-color: yellow;
+            }
+        }
+
+        @keyframes an2 {
+            from{
+                bottom: 0;
+                background-color: yellow;
+            }
+            to{
+                bottom: 100%;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
